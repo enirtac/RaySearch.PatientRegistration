@@ -1,0 +1,30 @@
+﻿<Window x:Class="RaySearch.PatientRegistration.App.ConsultationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaySearch.PatientRegistration.App"
+        mc:Ignorable="d"
+        Title="Register new consultation" Height="200" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label FontWeight="Bold">Add new consultation, choose a patient and press save</Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Patient:</Label>
+                <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding Path=Patients}" DisplayMemberPath="Name" SelectedItem="{Binding CurrentSelection}"/>
+                <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="5" Height="21" Width="50" Command="{Binding Path=SaveNewConsultationCommand}">Save</Button>
+                <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Height="21" Width="50" Command="{Binding Path=CloseWindowCommand}">Close</Button>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

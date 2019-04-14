@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaySearch.PatientRegistration.App", "RaySearch.PatientRegistration.App\RaySearch.PatientRegistration.App.csproj", "{6DD7DFB3-E5F5-4911-AD57-529853F644B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaySearch.PatientRegistration.Tests", "RaySearch.PatientRegistration.Tests\RaySearch.PatientRegistration.Tests.csproj", "{2D2B8F01-7A21-4CF1-8872-D5DF2BBC7163}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DD7DFB3-E5F5-4911-AD57-529853F644B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD7DFB3-E5F5-4911-AD57-529853F644B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD7DFB3-E5F5-4911-AD57-529853F644B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD7DFB3-E5F5-4911-AD57-529853F644B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2B8F01-7A21-4CF1-8872-D5DF2BBC7163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2B8F01-7A21-4CF1-8872-D5DF2BBC7163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2B8F01-7A21-4CF1-8872-D5DF2BBC7163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2B8F01-7A21-4CF1-8872-D5DF2BBC7163}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A4EADCE-31B1-4ADE-8AF4-980A35EDED6B}
+	EndGlobalSection
+EndGlobal

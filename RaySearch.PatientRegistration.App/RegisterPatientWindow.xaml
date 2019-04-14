@@ -1,0 +1,31 @@
+﻿<Window x:Class="RaySearch.PatientRegistration.App.RegisterPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaySearch.PatientRegistration.App"
+        mc:Ignorable="d"
+        Title="Register a new Patient" Height="200" Width="400"
+        Cursor="{Binding Cursor}">
+    <StackPanel>
+        <Label FontWeight="Bold">Register a new patient in the system"</Label>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Name:</Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Name="Name" Text="{Binding PatientName}"></TextBox>
+            <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="5" Height="21" Width="50" Command="{Binding Path=SaveNewPatientCommand}">Save</Button>
+            <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Height="21" Width="50" Command="{Binding Path=CloseWindowCommand}">Close</Button>
+       
+        </Grid>
+        <Label Foreground="Red" Content="{Binding Path=ErrorMessage}"></Label>
+    </StackPanel>
+</Window>

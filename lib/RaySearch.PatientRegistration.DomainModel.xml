@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RaySearch.PatientRegistration.DomainModel</name>
+    </assembly>
+    <members>
+        <member name="T:RaySearch.PatientRegistration.DomainModel.Consultation">
+            <summary>
+            A consultation represents a scheduled meeting between a patient and a doctor.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Consultation.#ctor(RaySearch.PatientRegistration.DomainModel.Patient,RaySearch.PatientRegistration.DomainModel.Doctor,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RaySearch.PatientRegistration.DomainModel.Consultation"/> class.
+            </summary>
+            <param name="patient">
+            The patient of the consultation.
+            </param>
+            <param name="doctor">
+            The doctor scheduled for the consultation.
+            </param>
+            <param name="time">
+            The time scheduled for the consultation.
+            </param>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Consultation.Patient">
+            <summary>
+            Gets the patient of the consultation.
+            </summary>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Consultation.Doctor">
+            <summary>
+            Gets the Doctor scheduled to perform the consultation.
+            </summary>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Consultation.Time">
+            <summary>
+            Gets the scheduled time of the consultation.
+            </summary>
+        </member>
+        <member name="T:RaySearch.PatientRegistration.DomainModel.Doctor">
+            <summary>
+            A doctor is employed by a hospital and can be scheduled to perform consultations of patients.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Doctor.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RaySearch.PatientRegistration.DomainModel.Doctor"/> class.
+            </summary>
+            <param name="name">
+            The name of the doctor.
+            </param>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Doctor.Name">
+            <summary>
+            Gets the name of the doctor.
+            </summary>
+        </member>
+        <member name="T:RaySearch.PatientRegistration.DomainModel.Exceptions.DomainValidationException">
+            <summary>
+            Exception thrown when domain logic validation fails.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Exceptions.DomainValidationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RaySearch.PatientRegistration.DomainModel.Exceptions.DomainValidationException"/> class.
+            </summary>
+            <param name="message">
+            The message.
+            </param>
+        </member>
+        <member name="T:RaySearch.PatientRegistration.DomainModel.Hospital">
+            <summary>
+            A hospital employs doctors and schedules consultations for registered patients.
+            </summary>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Hospital.Patients">
+            <summary>
+            A collection of registered patients.
+            </summary>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Hospital.Consultations">
+            <summary>
+            Contains all scheduled consultations.
+            </summary>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Hospital.WhenPatientRegistered">
+            <summary>
+            Notifies observers when a patient is registered.
+            </summary>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Hospital.WhenConsultationScheduled">
+            <summary>
+            Notifies observers when a consultation is scheduled.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Hospital.RegisterPatient(System.String)">
+            <summary>
+            Register a new patient. This method is not thread safe.
+            </summary>
+            <param name="name">The name of the patient.</param>
+            <returns></returns>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Hospital.ScheduleConsultation(RaySearch.PatientRegistration.DomainModel.Patient)">
+            <summary>
+            Schedules a consultation with a doctor for the specified patient. This method is not thread safe.
+            </summary>
+            <param name="patient">The patient that should be scheduled for consultation.</param>
+        </member>
+        <member name="T:RaySearch.PatientRegistration.DomainModel.Patient">
+            <summary>
+            A patient can be scheduled for consultation at a hospital.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Patient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RaySearch.PatientRegistration.DomainModel.Patient"/> class. 
+            </summary>
+            <param name="name">
+            The name of the patient
+            </param>
+        </member>
+        <member name="P:RaySearch.PatientRegistration.DomainModel.Patient.Name">
+            <summary>
+            Gets the name of the patient.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Observable.Observable`1.NotifyObservers(`0)">
+            <summary>
+            Sends a notification to all subscribers.
+            </summary>
+            <param name="value">The value to be sent.</param>
+        </member>
+        <member name="T:RaySearch.PatientRegistration.DomainModel.Observable.Observable`1.Disposable">
+            <summary>
+            Disposable calls a specified method when disposed.
+            </summary>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Observable.Observable`1.Disposable.#ctor(System.Action)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RaySearch.PatientRegistration.DomainModel.Observable.Observable`1.Disposable"/> class.
+            </summary>
+            <param name="callback">
+            The callback.
+            </param>
+        </member>
+        <member name="M:RaySearch.PatientRegistration.DomainModel.Observable.Observable`1.Disposable.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+    </members>
+</doc>
